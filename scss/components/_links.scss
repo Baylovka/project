@@ -1,0 +1,17 @@
+.link {
+    color: $color-primary-light-gray;
+    font-size: 18px;
+    line-height: 1.33;
+    transition: color .2s;
+
+    @media screen and (max-width: $bp-mobile) {
+        font-size: 16px;
+        line-height: normal;
+    }
+
+    &:hover {
+        color: $color-primary-red;
+        // box-shadow: 0 0 10px $color-primary-red; /* Підсвітка навколо кнопки */
+        // filter: drop-shadow(0 0 5px $color-primary-red);
+    }
+}

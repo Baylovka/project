@@ -1,0 +1,24 @@
+.icon {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    fill: $color-primary-red;
+    cursor: pointer;
+    transition: filter .2s;
+
+    &:hover {
+        // fill: 
+        // box-shadow: 0 0 10px $color-primary-red;
+        filter: drop-shadow(0 0 5px $color-primary-red);
+    }
+
+    &__size {
+        width: 40px;
+        height: 40px;
+
+        @media screen and (max-width: $bp-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

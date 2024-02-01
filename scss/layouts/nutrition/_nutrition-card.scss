@@ -1,0 +1,106 @@
+.nutrition-card {
+    width: clamp(9.5rem, 5.857rem + 16.19vw, 18rem); /*152-288 | 360-1200*/
+    padding: clamp(0.5rem, 0.286rem + 0.952vw, 1rem) 
+    clamp(0.5rem, 0.286rem + 0.952vw, 1rem) 
+    clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .2s;
+
+    @media screen and (max-width: 352px) {
+        width: auto;
+    }
+
+    &:hover {
+        box-shadow: 0px 8px 16px 0px rgba(24, 24, 23, 0.08);
+    }
+    
+    &__image {
+        margin-bottom: 8px;
+        width: 100%;
+        height: clamp(10.125rem, 6.75rem + 15vw, 18rem);
+        object-fit: contain;
+    }
+
+    &__code-rating-box {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        font-weight: 300;
+        margin-bottom: 8px;
+
+        @media screen and (min-width: $bp-small-desktop) {
+            font-size: 14px;
+            font-weight: 400;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__code-box {
+        color: $color-secondary-839AA9;
+        margin-bottom: unset;
+    }
+
+    &__id {}
+
+    &__box-rating {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__item-rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        fill: $color-secondary-FCB62A;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: clamp(0.875rem, 0.821rem + 0.238vw, 1rem); 
+        height: clamp(3.25rem, 3.089rem + 0.714vw, 3.625rem);
+        margin: 0 calc(0px - clamp(0.5rem, 0.286rem + 0.952vw, 1rem)) clamp(8px, 0.286rem + 0.952vw, 16px);
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    &__price-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: clamp(8px, 0.071rem + 1.905vw, 24px);
+    }
+
+    &__price-with-discount {
+        font-size: clamp(16px, 0.946rem + 0.238vw, 18px);
+        margin-bottom: unset;
+        font-weight: bold;
+    }
+
+    &__price-standart {
+        font-size: 12px;
+        font-weight: 300;
+        color: $color-secondary-839AA9;
+        margin-bottom: unset;
+        text-decoration: line-through;
+
+        @media screen and (min-width: $bp-tablet) {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__button {}
+}

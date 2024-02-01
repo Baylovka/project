@@ -1,0 +1,62 @@
+.pagination-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    user-select: none;
+
+    &__field {
+        position: relative;
+        width: 32px;
+        height: 24px;
+
+        &--inactive {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: not-allowed;
+        }
+    }
+
+    &__input {
+        appearance: none;
+    }
+
+    &__label {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 24px;
+        border-radius: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        transition: color .2s, background-color .2s;
+
+        &:hover {
+            color: $color-primary-white;
+            background-color: $color-secondary-FCB62A;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            width: 32px;
+            height: 24px;
+            border-radius: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &__input:checked + &__label::before {
+        background-color: $color-primary-orange;
+    }
+}

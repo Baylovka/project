@@ -1,0 +1,29 @@
+.pagination {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    @media screen and (min-width: $bp-mobile) {
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    &__bullet {
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $color-secondary-839AA9;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 12px;
+            height: 12px;
+        }
+
+        &--active {
+            background-color: $color-primary-orange;
+        }
+    }
+}

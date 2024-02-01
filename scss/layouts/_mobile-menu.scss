@@ -1,0 +1,161 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    background-color: $color-primary-ebony;
+    transform: translateX(100%);
+    transition: transform .2s;
+
+    &.is-open {
+        transform: translateX(0);
+    }
+
+    &__container {
+        padding: 18px 20px;
+
+        // @media screen and (min-width: $bp-mobile) {
+        //     padding: 42px 20px;
+        // }
+    }
+
+    &__logo-and-button {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo img {
+        @media screen and (max-width: $bp-mobile) {
+            width: 92px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border: none;
+        fill: none;
+        background-color: transparent;
+        stroke: $color-primary-red;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin: 32px 0 24px;
+        width: fit-content;
+
+        @media screen and (min-width: $bp-mobile) {
+            gap: 24px;
+        }
+    }
+
+    &__field-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__icon-link {
+        fill: $color-primary-red;
+        width: 18px;
+        height: 18px;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 22px;
+            height: 22px;
+        }
+
+    }
+
+    &__link {
+        font-size: 16px;
+
+        @media screen and (min-width: $bp-mobile) {
+            font-size: 22px;
+        }
+    }
+
+    &__social-media {
+        display: flex;
+        gap: 8px;
+        width: fit-content;
+    }
+
+    &__icon-instagram,
+    &__icon-facebook {
+        width: 40px;
+        height: 40px;
+
+        @media screen and (max-width: $bp-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__icon-instagram {
+        stroke: $color-primary-red;
+        fill: none;
+    }
+
+    &__line {
+        margin: 16px 0;
+        border: 1px solid $color-secondary-232428;
+    }
+
+    &__user {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    &__user-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+
+        @media screen and (max-width: $bp-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__user-avatar img {
+        width: 40px;
+        height: 40px;
+
+        @media screen and (max-width: $bp-mobile) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+
+
+    &__user-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}

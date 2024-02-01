@@ -1,0 +1,33 @@
+@import './utils/fonts';
+@import './utils/variables';
+@import './utils/utils';
+
+@import './base';
+
+@import './components/buttons';
+@import './components/links';
+@import './components/icons';
+@import './components/input';
+@import './components/service-card';
+@import './components/customer-card';
+@import './components/customer-rating';
+@import './components/pagination';
+@import './components/form';
+
+@import './layouts/container';
+@import './layouts/section';
+@import './layouts/header';
+@import './layouts/footer';
+@import './layouts/main-section';
+@import './layouts/less-talk-section';
+@import './layouts/services-section';
+@import './layouts/customer-section';
+@import './layouts/contact-section';
+@import './layouts/modal';
+@import './layouts/mobile-menu';
+
+@import './layouts/nutrition/nutrition-section';
+@import './layouts/nutrition/sort-block';
+@import './layouts/nutrition/pagination-block';
+@import './layouts/nutrition/nutrition-card';
+@import './layouts/nutrition/mobile-sorting';

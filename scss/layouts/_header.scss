@@ -1,0 +1,148 @@
+.header {
+    background-color: $color-primary-ebony;
+    box-shadow: 0 0 10px black;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        padding: 18px 0;
+
+        @media screen and (max-width: $bp-mobile) {
+            padding: 18px 0 0 0;
+        }
+    }
+
+    &__logo img {
+        @media screen and (max-width: $bp-mobile) {
+            width: 92px;
+        }
+    }
+
+    &__input {
+        @media screen and (max-width: $bp-small-desktop) {
+            display: none;
+        }
+    }
+
+    &__nav {
+        @media screen and (max-width: $bp-small-desktop) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px 24px;
+
+        @media screen and (min-width: $bp-desktop) {
+            gap: 8px 48px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        @media screen and (max-width: $bp-mobile) {
+            gap: 16px;
+        }
+    }
+
+
+
+    &__user {
+        position: relative;
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: filter .2s;
+
+        // &:hover {
+        //     filter: drop-shadow(0 0 20px $color-primary-red);
+        // }
+        @media screen and (max-width: $bp-small-desktop) {
+            display: none;
+        }
+    }
+
+    &__user-avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+    }
+
+    &__user-avatar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    &__user-name {
+        font-size: 14px;
+        color: $color-primary-snow;
+    }
+
+    &__user-icons {
+        fill: $color-primary-red;
+        width: 14px;
+        height: 14px;
+    }
+
+
+
+    &__user-menu {
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        gap: 8px;
+        position: absolute;
+        background-color: $color-secondary-232428;
+        border-radius: 16px;
+        padding: 16px;
+        top: 45px;
+        right: -10px;
+        font-size: 18px;
+        z-index: 5;
+    }
+
+    &__user-field-link {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    &__user-link {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+    &__btn-contact {
+        @media screen and (max-width: $bp-small-desktop) {
+            display: none;
+        }
+    }
+
+    &__btn-burger {
+        display: none;
+
+        @media screen and (max-width: $bp-small-desktop) {
+            display: block;
+        }
+    }
+}

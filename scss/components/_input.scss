@@ -1,0 +1,53 @@
+.input-container {
+    display: flex;
+    gap: 8px;
+    max-width: 240px;
+    width: 100%;
+    background-color: $color-secondary-232428;
+    border-radius: 8px;
+    padding: 8px 16px;
+    stroke: $color-primary-red;
+
+    &__input {
+        font-size: 16px;
+        background-color: $color-secondary-232428;
+        color: $color-primary-red;
+        border: none;
+        width: 100%;
+        padding: 0;
+    
+        &:focus {
+            outline: none;
+        }
+    
+        &::placeholder {
+            color: $color-primary-light-gray;
+        }
+    
+        &:focus::placeholder {
+            color: $color-primary-red;
+        }
+    }
+}
+
+.input-checkbox {
+    appearance: none;
+}
+
+.label-checkbox::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid $color-secondary-839AA9;
+    position: absolute;
+    left: -16px;
+    top: -1px;
+}
+
+.input-checkbox:checked + .label-checkbox::before {
+    background: url(../images/check-mark.svg) no-repeat;
+    background-size: 80% 80%;
+    background-position: center;
+}

@@ -1,0 +1,27 @@
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(180deg, #FFF 0%, #FFFBF4 100%);
+    border-radius: 16px;
+    border: 1px solid $color-secondary-F9F9FF;
+    padding: 47px 62px;
+
+    &:hover {
+        background: linear-gradient(180deg, $color-secondary-FCB62A 0%, #FFFBF4 100%);
+    }
+
+    &__svg {
+        width: 96px;
+        height: 96px;
+    }
+
+    &__title {
+        font-weight: 600;
+        color: $color-primary-orange;
+        text-align: center;
+        margin-bottom: 0;
+    }
+}
