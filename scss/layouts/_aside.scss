@@ -1,0 +1,65 @@
+.aside {
+    display: none;
+    flex-direction: column;
+    gap: 24px;
+    background-color: $color-primary-ebony;
+    border-radius: 24px;
+    width: 240px;
+    padding: 24px;
+    box-shadow: 0 0 10px black;
+
+    @media screen and (min-width: $bp-tablet) {
+        display: flex;
+        
+    }
+
+    &__platforms {
+    }
+
+    &__title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    &__list-platforms {
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-secondary-232428;
+            // background-color: $color-primary-snow;
+            // border-radius: 8px;
+            margin: 0 -24px;
+        }
+    }
+
+    &__icon {
+        fill: $color-primary-red;
+        width: 18px;
+        height: 18px;
+    }
+
+    &__link {
+        display: flex;
+        width: 100%;
+        line-height: 1.8;
+
+        &:hover {
+            color: $color-primary-snow;
+            font-weight: 500;
+        }
+
+
+    }
+
+    &__genres {
+    }
+
+    &__list-genres {
+    }
+}

@@ -18,6 +18,7 @@
 @import './layouts/section';
 @import './layouts/header';
 @import './layouts/footer';
+@import './layouts/aside';
 @import './layouts/main-section';
 @import './layouts/less-talk-section';
 @import './layouts/services-section';
@@ -26,8 +27,8 @@
 @import './layouts/modal';
 @import './layouts/mobile-menu';
 
-@import './layouts/nutrition/nutrition-section';
+@import './layouts/nutrition/game-section';
 @import './layouts/nutrition/sort-block';
 @import './layouts/nutrition/pagination-block';
-@import './layouts/nutrition/nutrition-card';
+@import './layouts/nutrition/game-card';
 @import './layouts/nutrition/mobile-sorting';

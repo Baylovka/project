@@ -4,3 +4,10 @@
     margin: 0 auto;
     padding: 0 20px;
 }
+
+.main-container {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    user-select: none;
+}

@@ -1,13 +1,9 @@
-.nutrition-section {
-    padding: 34px 0 0;
-
-    @media screen and (min-width: $bp-mobile) {
-        padding: 34px 0 44px;
-    }
-
-    @media screen and (min-width: $bp-small-desktop) {
-        padding: 72px 0 88px;
-    }
+.main {
+    display: flex;
+    flex-grow: 1;
+}
+.game-section {
+    flex-grow: 1;
 
     &__header {
         display: flex;
@@ -18,12 +14,11 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 72px;
         }
     }
 
     &__title {
-        color: $color-primary-orange;
+        color: $color-primary-red;
         margin-bottom: 16px;
 
         @media screen and (min-width: $bp-small-desktop) {
@@ -34,22 +29,53 @@
     &__products {}
 
     &__list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px 8px;
-        justify-content: center;
-
-        @media screen and (min-width: $bp-tablet) {
-            gap: 64px 28px;
-        }
+        // display: flex;
+        // justify-content: center;
+        // flex-wrap: wrap;
+        
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(clamp(9.5rem, 6.018rem + 15.476vw, 17.625rem), 1fr)); /*clamp(152-282)*/
+        gap: 18px 10px;
     }
 
     &__item {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-grow: 1;
+        // flex-grow: 1;
+        // flex-basis: calc((100% - 20px) / 3);
+        overflow: hidden;
+        border-radius: 24px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: ' ';
+            display: block;
+            top: calc(0% - (150% / 2) / 2);
+            left: calc((100% - 100px) / 2);
+            width: 100px;
+            height: 150%;
+            background: linear-gradient(90deg, transparent, #FF4242, #FF4242, #FF4242, #FF4242, transparent);
+            animation: animation-rotate 5s infinite linear;
+            z-index: -1;
+        }
+    
+        @keyframes animation-rotate {
+            0% {
+                transform: rotateZ(0deg);
+            }
+    
+            0% {
+                transform: rotateZ(360deg);
+            }
+        }
     }
+
+    // &__item:last-child {
+    //     flex-grow: unset;
+    //     flex-basis: max(calc((100% - 20px) / 3), clamp(9.5rem, 5.857rem + 16.19vw, 18rem));
+    // }
 
     &__pagination {
         display: flex;

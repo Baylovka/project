@@ -1,6 +1,8 @@
 .header {
     background-color: $color-primary-ebony;
     box-shadow: 0 0 10px black;
+    margin-bottom: 48px;
+    user-select: none;
 
     &__container {
         display: flex;
