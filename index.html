@@ -74,6 +74,11 @@
   </header>
   <div class="container main-container">
     <aside class="aside">
+      <button class="aside__btn-close aside-btn-close">
+        <svg class="icon__size">
+          <use href="images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
       <section class="aside__platforms">
         <h3 class="aside__title">Платформа</h3>
         <ul class="aside__list-platforms">
@@ -109,7 +114,7 @@
           </li>
           <li class="aside__item">
             <svg class="aside__icon">
-              <use href="./images/icons.svg#icon-apple"></use>
+              <use href="./images/icons.svg#icon-iOS"></use>
             </svg>
             <a class="aside__link link" href="#">IOS</a>
           </li>
@@ -198,11 +203,19 @@
       <section class="game-section">
         <div class="game-section__header">
           <h2 class="game-section__title section__title">Ігри</h2>
-          <div class="game-section__mobile-btn-sorting sort-btn-open">
-            <svg width="24" height="24">
-              <use href="./images/icons.svg#icon-sort-arrows"></use>
-            </svg>
-            <span id="name-sort">Popularity</span>
+          <div class="game-section__mobile-sort-filter">
+            <div class="game-section__mobile-sort sort-btn-open">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-sort-arrows"></use>
+              </svg>
+              <span id="name-sort">Популярні</span>
+            </div>
+            <div class="game-section__mobile-filter filter-btn-open">
+              <svg width="24" height="24">
+                <use href="./images/icons.svg#icon-filter"></use>
+              </svg>
+              <span id="name-sort">Фільтри</span>
+            </div>
           </div>
           <fieldset class="sort-block">
             <legend class="sort-block__title">Сортувати:</legend>
@@ -267,7 +280,7 @@
                       <use href="./images/icons.svg#icon-android"></use>
                     </svg>
                     <svg class="game-card__icon-platform">
-                      <use href="./images/icons.svg#icon-apple"></use>
+                      <use href="./images/icons.svg#icon-iOS"></use>
                     </svg>
                   </div>
                 </article>
@@ -311,7 +324,7 @@
                       <use href="./images/icons.svg#icon-android"></use>
                     </svg>
                     <svg class="game-card__icon-platform">
-                      <use href="./images/icons.svg#icon-apple"></use>
+                      <use href="./images/icons.svg#icon-iOS"></use>
                     </svg>
                   </div>
                 </article>
@@ -355,7 +368,7 @@
                       <use href="./images/icons.svg#icon-android"></use>
                     </svg>
                     <svg class="game-card__icon-platform">
-                      <use href="./images/icons.svg#icon-apple"></use>
+                      <use href="./images/icons.svg#icon-iOS"></use>
                     </svg>
                   </div>
                 </article>
@@ -399,7 +412,7 @@
                       <use href="./images/icons.svg#icon-android"></use>
                     </svg>
                     <svg class="game-card__icon-platform">
-                      <use href="./images/icons.svg#icon-apple"></use>
+                      <use href="./images/icons.svg#icon-iOS"></use>
                     </svg>
                   </div>
                 </article>
@@ -436,14 +449,6 @@
               <div class="pagination-block__field">
                 <input class="pagination-block__input" type="radio" id="6" name="pagination" value="6">
                 <label class="pagination-block__label" for="6">6</label>
-              </div>
-              <div class="pagination-block__field">
-                <input class="pagination-block__input" type="radio" id="7" name="pagination" value="7">
-                <label class="pagination-block__label" for="7">7</label>
-              </div>
-              <div class="pagination-block__field">
-                <input class="pagination-block__input" type="radio" id="8" name="pagination" value="8">
-                <label class="pagination-block__label" for="8">8</label>
               </div>
               <div class="pagination-block__field pagination-block__field--inactive">...</div>
               <div class="pagination-block__field">
@@ -591,6 +596,38 @@
     </div>
   </div>
 
+  <div class="backdrop-sorting is-hidden">
+    <div class="mobile-sorting">
+      <h3 class="mobile-sorting__title">Сортувати</h3>
+      <ul class="mobile-sorting__list">
+        <li class="mobile-sorting__item">
+          <span class="mobile-sorting__name-sort">Популярні</span>
+          <svg width="14px" height="14px">
+            <use href="./images/icons.svg#icon-pagination-arrow"></use>
+          </svg>
+        </li>
+        <li class="mobile-sorting__item">
+          <span class="mobile-sorting__name-sort">Найкращий рейтинг</span>
+          <svg width="14px" height="14px">
+            <use href="./images/icons.svg#icon-pagination-arrow"></use>
+          </svg>
+        </li>
+        <li class="mobile-sorting__item">
+          <span class="mobile-sorting__name-sort">Спочатку Нові</span>
+          <svg width="14px" height="14px">
+            <use href="./images/icons.svg#icon-pagination-arrow"></use>
+          </svg>
+        </li>
+        <li class="mobile-sorting__item">
+          <span class="mobile-sorting__name-sort">Спочатку Старі</span>
+          <svg width="14px" height="14px">
+            <use href="./images/icons.svg#icon-pagination-arrow"></use>
+          </svg>
+        </li>
+      </ul>
+    </div>
+  </div>
+
   <!-- <div class="backdrop is-hidden">
     <div class="modal">
       <button class="modal__btn-close modal-btn-close">
@@ -644,6 +681,7 @@
     <script src="./js/set-rating.js"></script>
     <script src="./js/modal.js"></script> -->
   <script src="./js/mobile-menu.js"></script>
+  <script src="./js/mobile-sort-filter.js"></script>
   <!-- <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/customer-slider.js"></script> -->
 </body>

@@ -1,28 +1,65 @@
 .aside {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 24px;
-    background-color: $color-primary-ebony;
-    border-radius: 24px;
-    width: 240px;
     padding: 24px;
+    background-color: $color-primary-ebony;
     box-shadow: 0 0 10px black;
+    z-index: 2;
+    overflow-y: auto;
+
+    position: absolute;
+    transform: translateX(-1000%);
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 8px;
 
     @media screen and (min-width: $bp-tablet) {
-        display: flex;
-        
+        position: static;
+        transform: translateX(0);
+        border-radius: 24px;
+        width: 240px;
+        height: fit-content;
     }
 
-    &__platforms {
+    &__btn-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border: none;
+        fill: none;
+        background-color: transparent;
+        stroke: $color-primary-red;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        @media screen and (min-width: $bp-mobile) {
+            top: 8px;
+            right: 8px;
+            width: 32px;
+            height: 32px;
+        }
+
+        @media screen and (min-width: $bp-tablet) {
+            display: none;
+        }
     }
+
+    &__platforms {}
 
     &__title {
         font-size: 24px;
         margin-bottom: 16px;
     }
 
-    &__list-platforms {
-    }
+    &__list-platforms {}
 
     &__item {
         display: flex;
@@ -57,9 +94,7 @@
 
     }
 
-    &__genres {
-    }
+    &__genres {}
 
-    &__list-genres {
-    }
+    &__list-genres {}
 }

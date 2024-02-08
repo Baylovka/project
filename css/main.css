@@ -548,11 +548,16 @@ a {
   background-color: #323234;
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 48px;
+  }
 }
 .header__container {
   display: -webkit-box;
@@ -720,7 +725,7 @@ a {
   /*remove*/
   /*remove*/
   /*remove*/
-  margin-top: 250px; /*remove*/
+  margin-top: 128px; /*remove*/
   overflow-x: clip;
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
@@ -731,6 +736,21 @@ a {
   position: relative; /*restore*/
   background-color: #323234;
   padding: 32px 0;
+}
+@media screen and (min-width: 460px) {
+  .footer {
+    margin-top: 260px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-top: unset;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    margin-top: 56px;
+  }
 }
 .footer__container {
   position: relative;
@@ -910,24 +930,76 @@ a {
 }
 
 .aside {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 24px;
-  background-color: #323234;
-  border-radius: 24px;
-  width: 240px;
   padding: 24px;
+  background-color: #323234;
   -webkit-box-shadow: 0 0 10px black;
           box-shadow: 0 0 10px black;
+  z-index: 2;
+  overflow-y: auto;
+  position: absolute;
+  -webkit-transform: translateX(-1000%);
+      -ms-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  top: 10px;
+  right: 10px;
+  left: 10px;
+  bottom: 10px;
+  border-radius: 8px;
 }
 @media screen and (min-width: 768px) {
   .aside {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    position: static;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    border-radius: 24px;
+    width: 240px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.aside__btn-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  border: none;
+  fill: none;
+  background-color: transparent;
+  stroke: #FF4242;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+@media screen and (min-width: 460px) {
+  .aside__btn-close {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .aside__btn-close {
+    display: none;
   }
 }
 .aside__title {
@@ -1822,6 +1894,9 @@ a {
     margin-bottom: unset;
   }
 }
+.game-section__products {
+  margin-bottom: clamp(1.5rem, 1.286rem + 0.952vw, 2rem);
+}
 .game-section__list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(clamp(9.5rem, 6.018rem + 15.476vw, 17.625rem), 1fr)); /*clamp(152-282)*/
@@ -1902,40 +1977,64 @@ a {
   border: none;
   padding: 0;
   border-radius: 2px;
+  fill: #FF4242;
   cursor: pointer;
   -webkit-transition: background-color 0.2s, fill 0.2s;
   transition: background-color 0.2s, fill 0.2s;
 }
 .game-section__button:hover {
-  fill: #FFFFFF;
-  background-color: #FCB62A;
+  fill: #F9F9F9;
+  background-color: #FB5656;
 }
 .game-section__button--rotate {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.game-section__mobile-btn-sorting {
+.game-section__mobile-sort-filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
   font-size: 14px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 @media screen and (min-width: 1024px) {
-  .game-section__mobile-btn-sorting {
+  .game-section__mobile-sort-filter {
     display: none;
   }
 }
 @media screen and (min-width: 768px) {
-  .game-section__mobile-btn-sorting {
+  .game-section__mobile-sort-filter {
     font-size: 16px;
+  }
+}
+.game-section__mobile-sort, .game-section__mobile-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.game-section__mobile-sort {
+  stroke: #FF4242;
+}
+.game-section__mobile-filter {
+  fill: #FF4242;
+}
+@media screen and (min-width: 768px) {
+  .game-section__mobile-filter {
+    display: none;
   }
 }
 
@@ -1986,7 +2085,7 @@ a {
   transition: color 0.2s, background-color 0.2s;
 }
 .sort-block__field:hover {
-  background-color: #232428;
+  background-color: #FB5656;
 }
 .sort-block__field:not(:last-child) {
   border-right: 1px solid #323234;
@@ -2085,8 +2184,8 @@ a {
   transition: color 0.2s, background-color 0.2s;
 }
 .pagination-block__label:hover {
-  color: #FFFFFF;
-  background-color: #FCB62A;
+  color: #F9F9F9;
+  background-color: #FB5656;
 }
 .pagination-block__label::before {
   content: "";
@@ -2100,7 +2199,7 @@ a {
   z-index: -1;
 }
 .pagination-block__input:checked + .pagination-block__label::before {
-  background-color: #FF9F0E;
+  background-color: #FF4242;
 }
 
 .game-card {
@@ -2260,13 +2359,13 @@ a {
 
 .mobile-sorting {
   border-radius: 24px 24px 0px 0px;
-  background-color: #FFFFFF;
+  background-color: #323234;
   padding: 16px 20px;
   width: 100%;
 }
 .mobile-sorting__title {
   text-align: center;
-  color: #FF9F0E;
+  color: #FF4242;
   font-size: 18px;
   font-weight: 600;
   line-height: 1.3;
@@ -2299,6 +2398,7 @@ a {
       -ms-flex-align: center;
           align-items: center;
   font-size: 16px;
+  fill: #FF4242;
 }
 @media screen and (min-width: 768px) {
   .mobile-sorting__item {
@@ -2306,6 +2406,6 @@ a {
   }
 }
 .mobile-sorting__item:hover {
-  color: #FF9F0E;
-  fill: #FF9F0E;
+  color: #FF4242;
+  fill: #FF4242;
 }/*# sourceMappingURL=main.css.map */
