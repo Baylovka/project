@@ -1,0 +1,88 @@
+.header-login {
+    background: transparent;
+    margin: unset;
+    position: absolute;
+    width: 100%;
+    backdrop-filter: blur(8px);
+    // filter: blur(5px);
+
+    &__link {
+        color: $color-primary-light-gray;
+    }
+}
+
+.main-login {
+    background-image: url(../images/bg-1dark.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: right;
+
+    @media screen and (min-width: $bp-desktop) {
+        background-size: 50% 100%;
+    }
+
+    // background-size: cover;
+    // background-position: right;
+}
+
+.form-section {
+    padding: 128px 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2rem, 1.357rem + 2.857vw, 3.5rem);
+    max-width: 560px;
+
+    @media screen and (min-width: $bp-mobile) {
+        padding: 128px 0 256px;
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+        padding: 128px 40px;
+    }
+
+    &__header {
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        padding: clamp(0.25rem, 0.143rem + 0.476vw, 0.5rem);
+    }
+
+    &__header-title {
+        font-family: 'Rowdies', sans-serif;
+        font-size: clamp(1.5rem, 1.286rem + 0.952vw, 2rem);
+        margin-bottom: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+
+        &--brand {
+            color: $color-primary-red;
+        }
+    }
+
+    &__header-btn {}
+
+    &__main {
+        backdrop-filter: blur(8px);
+        border-radius: 24px;
+        padding: clamp(0.25rem, 0.143rem + 0.476vw, 0.5rem);
+    }
+
+    &__main-title {}
+}
+
+// .footer-login {
+//     margin: unset;
+//     backdrop-filter: blur(20px);
+//     background-color: transparent;
+//     position: absolute;
+//     width: 100%;
+//     bottom: 0;
+// }
+// body {
+//     position: relative;
+// }
+
+// .link {
+//     color: $color-primary-snow;
+// }
+
+.footer {
+    margin: unset;
+}

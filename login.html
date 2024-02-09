@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <header class="header header-login">
+        <div class="container">
+            <div class="header__container">
+                <a class="header__logo" href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li><a class="link header-login__link" href="#less-talk">Ігри</a></li>
+                        <li><a class="link header-login__link" href="#services">Новини</a></li>
+                        <li><a class="link header-login__link" href="#customer">Форум</a></li>
+                        <li><a class="link header-login__link" href="#contact">Про платформу</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="./index.html">
+                        <button class="header__btn-contact modal-btn-open button" type="button">На головну</button>
+                    </a>
+                    <button class="header__btn-burger icon menu-btn-open" type="button">
+                        <svg class="icon__size">
+                            <use href="./images/icons.svg#icon-burger"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-login">
+        <div class="container">
+            <section class="form-section">
+                <div class="form-section__header">
+                    <h2 class="form-section__header-title">Приєднуйтеся до нашої платформи
+                        <span class="form-section__header-title--brand">GAME NTU KhPI</span>
+                    </h2>
+                    <a href="./register.html">
+                        <button class="form-section__header-btn button" type="button">Зареєструватися</button>
+                    </a>
+                </div>
+                <div class="form-section__main">
+                    <h2 class="section__title form-section__main-title">Вхід</h2>
+                    <form class="form" name="form-login" autocomplete="off">
+                        <div class="form__field">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-email"></use>
+                            </svg>
+                            <input class="form__input" type="email" name="modal-email" id="modal-email"
+                                placeholder="Електронна адреса" required>
+                        </div>
+                        <div class="form__field">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-password"></use>
+                            </svg>
+                            <input class="form__input" type="password" name="modal-email" id="modal-email"
+                                placeholder="Пароль" required>
+                            <button class="form__view-password-btn icon">
+                                <svg width="24px" height="24px">
+                                    <use href="./images/icons.svg#icon-hidden-password"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="form__buttons-box">
+                            <button class="button form__button" type="submit">Вхід</button>
+                            <a href="#" class="form__link link">Забули пароль?</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer footer-login">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__logo-and-social">
+                    <a class="footer__logo" href="./index.html">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                    <div class="footer__social-media">
+                        <a href="#" class="footer__icon-instagram icon">
+                            <svg class="icon__size">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__icon-facebook icon">
+                            <svg class="icon__size">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__menu">
+                        <li><a class="link" href="#">Ігри</a></li>
+                        <li><a class="link" href="#">Новини</a></li>
+                        <li><a class="link" href="#">Форум</a></li>
+                        <li><a class="link" href="#">Про платформу</a></li>
+                    </ul>
+                </nav>
+                <address class="footer__address">
+                    <ul class="footer__list">
+                        <li>
+                            <a class="link" href="tel:+380930000000">+ 38 (093) 000 00 00</a>
+                        </li>
+                        <li>
+                            <a class="link" href="mailto:Game.Platform@gmail.com">
+                                Game.Platform@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__address-info">
+                        <a class="link" href="#" target="_blank">Політика конфіденційності</a>
+                        <p class="footer__address-copyright">&copy; 2024 Дані захищені</p>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__container">
+            <div class="mobile-menu__logo-and-button">
+                <a class="mobile-menu__logo" href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <button class="mobile-menu__button menu-btn-close">
+                    <svg class="icon__size">
+                        <use href="images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__menu">
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-game"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#less-talk">Ігри</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-news"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#services">Новини</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-forum"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#customer">Форум</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-about"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#contact">Про платформу</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__social-media">
+                <a href="#" class="mobile-menu__icon-instagram icon">
+                    <svg class="icon__size">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+                <a href="#" class="mobile-menu__icon-facebook icon">
+                    <svg class="icon__size">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <hr class="mobile-menu__line">
+            <div class="mobile-menu__user">
+                <div class="mobile-menu__user-avatar">
+                    <img src="./images/test-avatar.webp" alt="user-avatar">
+                </div>
+                <div class="mobile-menu__user-name">
+                    <a class="link mobile-menu__link" href="#contact">UserName</a>
+                </div>
+            </div>
+
+            <!-- випадаюче меню юзера -->
+            <ul class="mobile-menu__user-menu">
+                <li class="mobile-menu__field-link">
+                    <svg class="mobile-menu__icon-link">
+                        <use href="./images/icons.svg#icon-user"></use>
+                    </svg>
+                    <a class="mobile-menu__link link" href="#">Профіль</a>
+                </li>
+                <li class="mobile-menu__field-link">
+                    <svg class="mobile-menu__icon-link">
+                        <use href="./images/icons.svg#icon-logout"></use>
+                    </svg>
+                    <a class="mobile-menu__link link" href="#">Вийти</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
+</body>
+
+</html>
