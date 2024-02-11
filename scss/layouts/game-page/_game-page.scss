@@ -1,0 +1,144 @@
+.game-page {
+    // background-color: $color-primary-ebony;
+}
+
+.game-section-header {
+    margin: -24px 0 0;
+
+    @media screen and (min-width: $bp-tablet) {
+        margin: -48px 0 0;
+    }
+    // width: 100%; 
+    height: 300px;
+    background-image: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8) 85%, #000000 100%);
+    // background-color: aliceblue;
+    z-index: 0;
+    overflow: hidden;
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        
+        position: relative;
+        // top: -50%;
+        z-index: -1;
+    }
+}
+
+.game-section-main {
+    background-color: $color-primary-ebony;
+    // position: relative;
+    // &::before {
+    //     content: "";
+    //     width: 100%;
+    //     height: 100%;
+    //     background: url(../images/blue-bg-top-test.svg) no-repeat;
+    //     bottom: -150px;
+    //     position: absolute;
+    //     background-size: 100%;
+        
+    // }
+
+
+    &__container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        // padding: 0 20px; /*remove*/
+    
+    
+    
+        position: relative;
+        top: calc(0px - clamp(7rem, 4.429rem + 11.429vw, 13rem) / 2);
+        align-items: flex-end;
+    }
+
+
+    &__picture {
+        // height: clamp(8rem, 5.214rem + 12.381vw, 14.5rem); /*128-232*/
+        // height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
+        // width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
+        /*112-208*/
+        // object-fit: cover;
+        height: min-content;
+
+        & img {
+            height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
+            width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
+            object-fit: cover;
+            
+            border-radius: 20px;
+
+            // position: relative;
+            // top: -50%;
+        }
+    }
+
+    .game-section-main {
+
+		&__name-game-and-author {
+            font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+            margin-bottom: 16px;
+		}
+
+		&__name-game {
+            color: $color-primary-red;
+            font-family: "Rowdies", sans-serif;
+            font-size: clamp(1.5rem, 1.071rem + 1.905vw, 2.5rem);
+            margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+            text-align: center;
+		}
+
+		&__name-author {
+            cursor: pointer;
+            &:hover {
+                color: $color-primary-red;
+            }
+		}
+}
+
+
+
+    &__statisctics-list {
+        display: flex;
+        gap: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+        flex-grow: 1;
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+        // justify-content: space-evenly;
+        
+    }
+}
+
+.card-statistic {
+    
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    flex-basis: calc(100% / 2);
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    &__value {
+        font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+    }
+
+    &__icon {
+        width: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+        /*12-16*/
+        height: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+        /*12-16*/
+        fill: $color-primary-red;
+    }
+
+    &__down {
+        color: $color-primary-light-gray;
+        font-size: clamp(0.875rem, 0.768rem + 0.476vw, 1.125rem);
+    }
+}
