@@ -2530,7 +2530,7 @@ a {
 
 .game-section-header {
   margin: -24px 0 0;
-  height: 300px;
+  height: clamp(8.5rem, 3.571rem + 21.905vw, 20rem);
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(85%, rgba(0, 0, 0, 0.8)), to(#000000));
   background-image: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8) 85%, #000000 100%);
   z-index: 0;
@@ -2547,13 +2547,34 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
-     object-position: top;
+     object-position: top; /*can make replace variable (user change)*/
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
   position: relative;
   z-index: -1;
 }
 
 .game-section-main {
-  background-color: #323234;
+  position: relative;
+  font-size: 0px;
+}
+.game-section-main::before {
+  content: "";
+  width: 100%;
+  height: 60px;
+  background: url(../images/blue-bg-top-test.svg) no-repeat;
+  bottom: 0px;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .game-section-main::before {
+    bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .game-section-main::before {
+    background-size: 100%;
+  }
 }
 .game-section-main__container {
   display: -webkit-box;
@@ -2568,34 +2589,30 @@ a {
       -ms-flex-align: end;
           align-items: flex-end;
 }
-.game-section-main__picture {
-  /*112-208*/
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-.game-section-main__picture img {
+.game-section-main__game-logo {
+  -webkit-filter: drop-shadow(0 0 10px black);
+          filter: drop-shadow(0 0 10px black);
   height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
   width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
+  border-radius: 16px;
 }
-.game-section-main .game-section-main__name-game-and-author {
+.game-section-main__name-game-and-author {
   font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-  margin-bottom: 16px;
+  margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
 }
-.game-section-main .game-section-main__name-game {
+.game-section-main__name-game {
   color: #FF4242;
   font-family: "Rowdies", sans-serif;
   font-size: clamp(1.5rem, 1.071rem + 1.905vw, 2.5rem);
   margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
   text-align: center;
 }
-.game-section-main .game-section-main__name-author {
+.game-section-main__name-author {
   cursor: pointer;
 }
-.game-section-main .game-section-main__name-author:hover {
+.game-section-main__name-author:hover {
   color: #FF4242;
 }
 .game-section-main__statisctics-list {
@@ -2607,6 +2624,9 @@ a {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .card-statistic {
@@ -2620,8 +2640,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  gap: 2px;
 }
 .card-statistic__top {
   display: -webkit-box;
@@ -2640,12 +2659,125 @@ a {
 }
 .card-statistic__icon {
   width: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-  /*12-16*/
   height: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-  /*12-16*/
   fill: #FF4242;
 }
 .card-statistic__down {
   color: #747474;
-  font-size: clamp(0.875rem, 0.768rem + 0.476vw, 1.125rem);
+  font-size: clamp(0.75rem, 0.643rem + 0.476vw, 1rem);
+  text-align: center;
+}
+
+.game-section-screenshots__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+@media screen and (min-width: 460px) {
+  .game-section-screenshots__container {
+    width: 420px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .game-section-screenshots__container {
+    width: auto;
+  }
+}
+.game-section-screenshots__list {
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+.game-section-screenshots__carousel-btn {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .game-section-screenshots__carousel-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #FF4242;
+    stroke: #F9F9F9;
+    fill: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+}
+.game-section-screenshots__carousel-btn--rotate {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.game-section-screenshots__carousel-btn:hover {
+  -webkit-box-shadow: 0 0 10px #FF4242;
+          box-shadow: 0 0 10px #FF4242; /* Підсвітка навколо кнопки */
+}
+
+.screenshot-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 200px;
+}
+.screenshot-card__img-bg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+  padding: 8px 0;
+}
+.pagination__bullet {
+  display: block;
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #839AA9;
+  cursor: pointer;
+}
+.pagination__bullet--active {
+  background-color: #FF4242;
+  -webkit-box-shadow: 0 0 8px #FF4242;
+          box-shadow: 0 0 8px #FF4242; /* Підсвітка навколо кнопки */
 }/*# sourceMappingURL=main.css.map */

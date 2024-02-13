@@ -2,7 +2,7 @@ const swiper = new Swiper('.swiper', {
     loop: true,
     speed: 250,
     slidesPerView: 1,
-    spaceBetween: 16,
+    spaceBetween: 8,
     breakpoints: {
         768: {
             slidesPerView: 2,
@@ -16,10 +16,20 @@ const swiper = new Swiper('.swiper', {
         el: '.pagination',
         bulletClass: 'pagination__bullet',
         bulletActiveClass: 'pagination__bullet--active',
+        clickable: true,
     },
 
     navigation: {
-        nextEl: '.customer-section__carousel-btn.next',
-        prevEl: '.customer-section__carousel-btn.prev',
+        nextEl: '.game-section-screenshots__carousel-btn.next',
+        prevEl: '.game-section-screenshots__carousel-btn.prev',
     },
+    // grabCursor: true,
+    // autoHeight: true,
+
+    // watchOverFlow: true,
+
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
 });

@@ -1,17 +1,12 @@
-.game-page {
-    // background-color: $color-primary-ebony;
-}
-
 .game-section-header {
     margin: -24px 0 0;
 
     @media screen and (min-width: $bp-tablet) {
         margin: -48px 0 0;
     }
-    // width: 100%; 
-    height: 300px;
+
+    height: clamp(8.5rem, 3.571rem + 21.905vw, 20rem);
     background-image: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.8) 85%, #000000 100%);
-    // background-color: aliceblue;
     z-index: 0;
     overflow: hidden;
 
@@ -19,105 +14,88 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top;
-        
+        object-position: top; /*can make replace variable (user change)*/
+        filter: brightness(80%);
         position: relative;
-        // top: -50%;
         z-index: -1;
     }
 }
 
 .game-section-main {
-    background-color: $color-primary-ebony;
-    // position: relative;
-    // &::before {
-    //     content: "";
-    //     width: 100%;
-    //     height: 100%;
-    //     background: url(../images/blue-bg-top-test.svg) no-repeat;
-    //     bottom: -150px;
-    //     position: absolute;
-    //     background-size: 100%;
-        
-    // }
+    // background-color: $color-primary-ebony;
+    position: relative;
+    font-size: 0px;
 
+    &::before {
+        content: "";
+        width: 100%;
+        height: 60px;
+        background: url(../images/blue-bg-top-test.svg) no-repeat;
+        bottom: 0px;
+        position: absolute;
+
+        @media screen and (min-width: $bp-tablet) {
+            bottom: 20px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            background-size: 100%;
+        }
+    }
 
     &__container {
         display: flex;
         gap: 10px;
         flex-wrap: wrap;
-        // padding: 0 20px; /*remove*/
-    
-    
-    
         position: relative;
         top: calc(0px - clamp(7rem, 4.429rem + 11.429vw, 13rem) / 2);
         align-items: flex-end;
     }
 
-
-    &__picture {
-        // height: clamp(8rem, 5.214rem + 12.381vw, 14.5rem); /*128-232*/
-        // height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
-        // width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
-        /*112-208*/
-        // object-fit: cover;
-        height: min-content;
-
-        & img {
-            height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
-            width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
-            object-fit: cover;
-            
-            border-radius: 20px;
-
-            // position: relative;
-            // top: -50%;
-        }
+    &__game-logo {
+        filter: drop-shadow(0 0 10px black);
+        height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
+        width: clamp(11rem, 6.929rem + 18.095vw, 20.5rem);
+        object-fit: cover;
+        border-radius: 16px;
     }
 
-    .game-section-main {
+    &__name-game-and-author {
+        font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+    }
 
-		&__name-game-and-author {
-            font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-            margin-bottom: 16px;
-		}
+    &__name-game {
+        color: $color-primary-red;
+        font-family: "Rowdies", sans-serif;
+        font-size: clamp(1.5rem, 1.071rem + 1.905vw, 2.5rem);
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+        text-align: center;
+    }
 
-		&__name-game {
+    &__name-author {
+        cursor: pointer;
+
+        &:hover {
             color: $color-primary-red;
-            font-family: "Rowdies", sans-serif;
-            font-size: clamp(1.5rem, 1.071rem + 1.905vw, 2.5rem);
-            margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
-            text-align: center;
-		}
-
-		&__name-author {
-            cursor: pointer;
-            &:hover {
-                color: $color-primary-red;
-            }
-		}
-}
-
-
+        }
+    }
 
     &__statisctics-list {
         display: flex;
         gap: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
         flex-grow: 1;
         margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
-        // justify-content: space-evenly;
-        
+        justify-content: space-evenly;
     }
 }
 
 .card-statistic {
-    
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-    flex-basis: calc(100% / 2);
+    gap: 2px;
+
     &__top {
         display: flex;
         align-items: center;
@@ -131,14 +109,149 @@
 
     &__icon {
         width: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-        /*12-16*/
         height: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
-        /*12-16*/
         fill: $color-primary-red;
     }
 
     &__down {
         color: $color-primary-light-gray;
-        font-size: clamp(0.875rem, 0.768rem + 0.476vw, 1.125rem);
+        font-size: clamp(0.75rem, 0.643rem + 0.476vw, 1rem);
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+.game-section-screenshots {
+    &__container {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        @media screen and (min-width: $bp-mobile) {
+            width: 420px;
+        }
+        
+        @media screen and (min-width: $bp-tablet) {
+            width: auto;
+        }
+    }
+
+    &__list {
+        // max-height: 600px; /*temp*/
+        // display: flex;
+        align-items: center !important;
+        // justify-content: center;
+    }
+
+    &__carousel-btn {
+        display: none;
+
+        @media screen and (min-width: $bp-tablet) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: $color-primary-red;
+            stroke: $color-primary-snow;
+            fill: transparent;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: background-color .2s;
+        }
+
+        &--rotate {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px $color-primary-red; /* Підсвітка навколо кнопки */
+        }
+    }
+}
+
+.screenshot-card {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    // height: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 200px;
+
+    // flex-grow: 1;
+    // width: 300px;
+
+    @media screen and (min-width: $bp-mobile) {
+        // height: 456px;
+    }
+    &__img-bg {
+        // position: absolute;
+        // z-index: -1;
+        // top: 0;
+        // left: 0;
+        width: 100%;
+        height: 100%;
+        // max-height: 600px;
+        object-fit: cover;
+    }
+
+    // &__content {
+    //     padding: 16px 32px;
+    //     text-align: center;
+    //     width: 100%;
+
+    // }
+
+    // &__title {
+    //     color: $color-primary-white;
+    //     font-size: 24px;
+    //     font-weight: 500;
+    //     margin-bottom: 8px;
+    // }
+
+    // &__text {
+    //     color: $color-primary-white;
+    //     font-size: 16px;
+    //     font-weight: 300;
+    //     margin-bottom: 24px;
+    // }
+}
+
+.pagination {
+    display: flex;
+    gap: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+    padding: 8px 0;
+
+    &__bullet {
+        display: block;
+        width: 32px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $color-secondary-839AA9;
+        cursor: pointer;
+
+        // @media screen and (min-width: $bp-mobile) {
+        //     width: 12px;
+        //     height: 12px;
+        // }
+
+        &--active {
+            background-color: $color-primary-red;
+            box-shadow: 0 0 8px $color-primary-red; /* Підсвітка навколо кнопки */
+        }
     }
 }
