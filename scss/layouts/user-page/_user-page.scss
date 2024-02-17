@@ -1,0 +1,64 @@
+.user-section-main {
+    position: relative;
+    font-size: 0px;
+
+    margin-bottom: clamp(1.5rem, 0.857rem + 2.857vw, 3rem);
+
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 60px;
+        background: url(../images/blue-bg-top-test.svg) no-repeat;
+        bottom: -56px;
+        position: absolute;
+
+        @media screen and (min-width: $bp-tablet) {
+            bottom: -80px;
+        }
+
+        @media screen and (min-width: $bp-desktop) {
+            background-size: 100%;
+        }
+    }
+
+    &__container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        // position: relative;
+        align-items: flex-end;
+    }
+
+    &__user-avatar {
+        filter: drop-shadow(0 0 10px black);
+        height: clamp(7rem, 4.429rem + 11.429vw, 13rem);
+        width: clamp(7rem, 4.429rem + 11.429vw, 13rem);
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    &__name-user-and-status {
+        font-size: clamp(1rem, 0.839rem + 0.714vw, 1.375rem);
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+    }
+
+    &__name-user {
+        color: $color-primary-red;
+        font-family: "Rowdies", sans-serif;
+        font-size: clamp(1.5rem, 1.071rem + 1.905vw, 2.5rem);
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+    }
+
+    &__status {
+        color: $color-secondary-C6C9CF;
+    }
+
+    &__statisctics-list {
+        display: flex;
+        gap: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
+        flex-grow: 1;
+        margin-bottom: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+        justify-content: space-evenly;
+    }
+}
