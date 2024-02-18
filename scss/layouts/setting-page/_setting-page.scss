@@ -1,0 +1,66 @@
+.main-container-setting {
+    background-color: $color-primary-ebony;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    padding: 24px;
+
+    &__form {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: clamp(1.5rem, 1.286rem + 0.952vw, 2rem);
+    }
+
+    &__text {
+        color: $color-primary-light-gray;
+        font-size: clamp(1rem, 0.893rem + 0.476vw, 1.25rem);
+    }
+}
+
+.games-section {
+    text-align: center;
+
+    &__container {
+        max-width: 704px;
+        margin: 0 auto;
+    }
+
+    &__list-games {
+        display: flex;
+        flex-direction: column;
+        // gap: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+
+    }
+
+    &__game {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: clamp(0.25rem, 0.143rem + 0.476vw, 0.5rem) clamp(0.25rem, 0.143rem + 0.476vw, 0.5rem);
+
+        &:nth-child(odd) {
+            background-color: $color-primary-gray;
+        }
+    }
+
+    &__name {
+        margin: 0;
+    }
+
+    &__icons-box {
+        display: flex;
+        gap: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+        fill: $color-primary-red;
+    }
+
+    &__icon {
+        width: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+        height: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+        cursor: pointer;
+        transition: filter .2s;
+
+        &:hover {
+            filter: drop-shadow(0 0 10px $color-primary-red);
+        }
+    }
+}

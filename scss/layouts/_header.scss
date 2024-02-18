@@ -68,11 +68,11 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: filter .2s;
 
-        // &:hover {
-        //     filter: drop-shadow(0 0 20px $color-primary-red);
-        // }
+        &:hover .header__user-name {
+            // filter: drop-shadow(0 0 20px $color-primary-red);
+            color: $color-primary-red;
+        }
         @media screen and (max-width: $bp-small-desktop) {
             display: none;
         }
@@ -96,6 +96,7 @@
     &__user-name {
         font-size: 14px;
         color: $color-primary-snow;
+        transition: all .2s;
     }
 
     &__user-icons {
@@ -126,10 +127,12 @@
         justify-content: flex-start;
         align-items: center;
         gap: 8px;
+        
     }
 
     &__user-link {
         font-size: 14px;
+        width: 100%;
     }
 
 

@@ -18,3 +18,9 @@
 .brand-color {
     color: $color-primary-red;
 }
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}

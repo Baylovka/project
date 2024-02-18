@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Platform</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__container">
+                <a class="header__logo" href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+
+                <div class="input-container header__input">
+                    <svg width="24px" height="24px">
+                        <use href="./images/icons.svg#icon-search"></use>
+                    </svg>
+                    <input class="input-container__input" type="text" name="search" placeholder="Пошук"
+                        autocomplete="off" required>
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="header__menu">
+                        <li><a class="link" href="#less-talk">Ігри</a></li>
+                        <li><a class="link" href="#services">Новини</a></li>
+                        <li><a class="link" href="#customer">Форум</a></li>
+                        <li><a class="link" href="#contact">Про платформу</a></li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <a href="./login.html">
+                        <button class="header__btn-contact modal-btn-open button" type="button">Увійти</button>
+                    </a>
+                    <div class="header__user">
+                        <div class="header__user-avatar">
+                            <img src="./images/test-avatar.webp" alt="user-avatar">
+                        </div>
+                        <div class="header__user-name">
+                            UserName
+                        </div>
+                        <svg class="header__user-icons">
+                            <use href="./images/icons.svg#icon-down-arrow"></use>
+                        </svg>
+
+                        <!-- випадаюче меню юзера -->
+                        <ul class="header__user-menu is-hidden">
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-user"></use>
+                                </svg>
+                                <a class="header__user-link link" href="./user-page.html">Профіль</a>
+                            </li>
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-game"></use>
+                                </svg>
+                                <a class="header__user-link link" href="./add-game-page.html">Додати гру</a>
+                            </li>
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-setting"></use>
+                                </svg>
+                                <a class="header__user-link link" href="./setting.html">Налаштування</a>
+                            </li>
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-logout"></use>
+                                </svg>
+                                <a class="header__user-link link" href="#">Вийти</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <button class="header__btn-burger icon menu-btn-open" type="button">
+                        <svg class="icon__size">
+                            <use href="./images/icons.svg#icon-burger"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container main-container">
+        <aside class="aside">
+            <button class="aside__btn-close aside-btn-close">
+                <svg class="icon__size">
+                    <use href="images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <section>
+                <h3 class="aside__title">Налаштування</h3>
+                <ul class="aside__list-platforms">
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-user"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Профіль</a>
+                    </li>
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Змінити пароль</a>
+                    </li>
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Змінити email</a>
+                    </li>
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-game"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Список ігор</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="admin-aside-section">
+                <h3 class="aside__title">Адмін панель</h3>
+                <ul class="aside__list-platforms">
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-user"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Заблокувати</a>
+                    </li>
+                    <li class="aside__item">
+                        <svg class="aside__icon">
+                            <use href="./images/icons.svg#icon-game"></use>
+                        </svg>
+                        <a class="aside__link link" href="#">Список всіх ігор</a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <main class="main-container-setting">
+            <section class="profile-section">
+                <h2 class="aside__title">Змінити ім'я</h2>
+                <form class="form main-container-setting__form" name="form-change-name" autocomplete="off">
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-user"></use>
+                        </svg>
+                        <input class="form__input" type="text" name="change-name" id="change-name"
+                            placeholder="Введіть нове ім'я" required>
+                    </div>
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <input class="form__input" type="password" name="check-password" id="check-password"
+                            placeholder="Пароль" required>
+                        <button class="form__view-password-btn icon">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-hidden-password"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Змінити</button>
+                    </div>
+                </form>
+                <h2 class="aside__title">Змінити аватар</h2>
+                <form class="form main-container-setting__form" name="change-avatar">
+                    <label for="image-upload">Виберіть зображення:</label>
+                    <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                    <button class="button" type="submit">Змінити</button>
+                </form>
+            </section>
+
+            <section class="password-section">
+                <h2 class="aside__title">Змінити пароль</h2>
+                <form class="form main-container-setting__form" name="form-change-password" autocomplete="off">
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <input class="form__input" type="password" name="new-password" id="new-password"
+                            placeholder="Новий пароль" required>
+                        <button class="form__view-password-btn icon">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-hidden-password"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <input class="form__input" type="password" name="old-password" id="old-password"
+                            placeholder="Старий пароль" required>
+                        <button class="form__view-password-btn icon">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-hidden-password"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <input class="form__input" type="password" name="confirm-old-password" id="confirm-old-password"
+                            placeholder="Підтвердити пароль" required>
+                        <button class="form__view-password-btn icon">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-hidden-password"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Змінити</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="email-section">
+                <h2 class="aside__title">Змінити email</h2>
+                <p class="main-container-setting__text">Ваша поточна електронна адреса: address@gmail.com</p>
+                <form class="form main-container-setting__form" name="form-change-email" autocomplete="off">
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-email"></use>
+                        </svg>
+                        <input class="form__input" type="text" name="new-email" id="new-email"
+                            placeholder="Введіть нову адресу" required>
+                    </div>
+                    <div class="form__field">
+                        <svg width="24px" height="24px">
+                            <use href="./images/icons.svg#icon-password"></use>
+                        </svg>
+                        <input class="form__input" type="password" name="check-password" id="check-password"
+                            placeholder="Пароль" required>
+                        <button class="form__view-password-btn icon">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-hidden-password"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" type="submit">Змінити</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="games-section">
+                <h2 class="aside__title brand-color">Список ігор</h2>
+                <div class="games-section__container">
+                    <div class="games-section__search-container">
+                        <div class="form__field">
+                            <svg width="24px" height="24px">
+                                <use href="./images/icons.svg#icon-game"></use>
+                            </svg>
+                            <input class="form__input" type="text" name="search-game" id="search-game"
+                                placeholder="Назва гри" required>
+                        </div>
+                    </div>
+                    <ul class="games-section__list-games">
+                        <li class="games-section__game">
+                            <p class="games-section__name">
+                                <a class="link" href="./game-page.html">League legends 2</a>
+                            </p>
+                            <div class="games-section__icons-box">
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-edit"></use>
+                                </svg>
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-delete"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="games-section__game">
+                            <p class="games-section__name">
+                                <a class="link" href="./game-page.html">League legends 2</a>
+                            </p>
+                            <div class="games-section__icons-box">
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-edit"></use>
+                                </svg>
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-delete"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="games-section__game">
+                            <p class="games-section__name">
+                                <a class="link" href="./game-page.html">League legends 2</a>
+                            </p>
+                            <div class="games-section__icons-box">
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-edit"></use>
+                                </svg>
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-delete"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="games-section__game">
+                            <p class="games-section__name">
+                                <a class="link" href="./game-page.html">League legends 2</a>
+                            </p>
+                            <div class="games-section__icons-box">
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-edit"></use>
+                                </svg>
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-delete"></use>
+                                </svg>
+                            </div>
+                        </li>
+                        <li class="games-section__game">
+                            <p class="games-section__name">
+                                <a class="link" href="./game-page.html">League legends 2</a>
+                            </p>
+                            <div class="games-section__icons-box">
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-edit"></use>
+                                </svg>
+                                <svg class="games-section__icon">
+                                    <use href="./images/icons.svg#icon-delete"></use>
+                                </svg>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__logo-and-social">
+                    <a class="footer__logo" href="./index.html">
+                        <img src="./images/logo.svg" alt="logo">
+                    </a>
+                    <div class="footer__social-media">
+                        <a href="#" class="footer__icon-instagram icon">
+                            <svg class="icon__size">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__icon-facebook icon">
+                            <svg class="icon__size">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__menu">
+                        <li><a class="link" href="#">Ігри</a></li>
+                        <li><a class="link" href="#">Новини</a></li>
+                        <li><a class="link" href="#">Форум</a></li>
+                        <li><a class="link" href="#">Про платформу</a></li>
+                    </ul>
+                </nav>
+                <address class="footer__address">
+                    <ul class="footer__list">
+                        <li>
+                            <a class="link" href="tel:+380930000000">+ 38 (093) 000 00 00</a>
+                        </li>
+                        <li>
+                            <a class="link" href="mailto:Game.Platform@gmail.com">
+                                Game.Platform@gmail.com
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__address-info">
+                        <a class="link" href="#" target="_blank">Політика конфіденційності</a>
+                        <p class="footer__address-copyright">&copy; 2024 Дані захищені</p>
+                    </div>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu__container">
+            <div class="mobile-menu__logo-and-button">
+                <a class="mobile-menu__logo" href="./index.html">
+                    <img src="./images/logo.svg" alt="logo">
+                </a>
+                <button class="mobile-menu__button menu-btn-close">
+                    <svg class="icon__size">
+                        <use href="images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+            </div>
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__menu">
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-game"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#less-talk">Ігри</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-news"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#services">Новини</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-forum"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#customer">Форум</a>
+                    </li>
+                    <li class="mobile-menu__field-link">
+                        <svg class="mobile-menu__icon-link">
+                            <use href="./images/icons.svg#icon-about"></use>
+                        </svg>
+                        <a class="link mobile-menu__link" href="#contact">Про платформу</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu__social-media">
+                <a href="#" class="mobile-menu__icon-instagram icon">
+                    <svg class="icon__size">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+                <a href="#" class="mobile-menu__icon-facebook icon">
+                    <svg class="icon__size">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </div>
+
+            <hr class="mobile-menu__line">
+            <div class="mobile-menu__user">
+                <div class="mobile-menu__user-avatar">
+                    <img src="./images/test-avatar.webp" alt="user-avatar">
+                </div>
+                <div class="mobile-menu__user-name">
+                    <a class="link mobile-menu__link" href="#contact">UserName</a>
+                </div>
+            </div>
+
+            <!-- випадаюче меню юзера -->
+            <ul class="mobile-menu__user-menu">
+                <li class="mobile-menu__field-link">
+                    <svg class="mobile-menu__icon-link">
+                        <use href="./images/icons.svg#icon-user"></use>
+                    </svg>
+                    <a class="mobile-menu__link link" href="#">Профіль</a>
+                </li>
+                <li class="mobile-menu__field-link">
+                    <svg class="mobile-menu__icon-link">
+                        <use href="./images/icons.svg#icon-logout"></use>
+                    </svg>
+                    <a class="mobile-menu__link link" href="#">Вийти</a>
+                </li>
+            </ul>
+            <a href="./login.html">
+                <button class="button" type="button">Увійти</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/user-menu.js"></script>
+</body>
+
+</html>

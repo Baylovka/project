@@ -49,12 +49,24 @@
                         </svg>
 
                         <!-- випадаюче меню юзера -->
-                        <ul class="header__user-menu" style="display: none;">
+                        <ul class="header__user-menu is-hidden">
                             <li class="header__user-field-link">
                                 <svg class="header__user-icons">
                                     <use href="./images/icons.svg#icon-user"></use>
                                 </svg>
-                                <a class="header__user-link link" href="#">Профіль</a>
+                                <a class="header__user-link link" href="./user-page.html">Профіль</a>
+                            </li>
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-game"></use>
+                                </svg>
+                                <a class="header__user-link link" href="./add-game-page.html">Додати гру</a>
+                            </li>
+                            <li class="header__user-field-link">
+                                <svg class="header__user-icons">
+                                    <use href="./images/icons.svg#icon-setting"></use>
+                                </svg>
+                                <a class="header__user-link link" href="./setting.html">Налаштування</a>
                             </li>
                             <li class="header__user-field-link">
                                 <svg class="header__user-icons">
@@ -303,7 +315,7 @@
                         <svg class="game-section-download__icon-platform">
                             <use href="./images/icons.svg#icon-windows"></use>
                         </svg>
-                        <button class="button game-section-download__btn">Завантажити</button>
+                        <button class="button button-game-page">Завантажити</button>
                     </li>
                     <li class="game-section-download__item">
                         <p class="game-section-download__file-name">League of Legends 2 macOS.zip</p>
@@ -311,7 +323,7 @@
                         <svg class="game-section-download__icon-platform">
                             <use href="./images/icons.svg#icon-apple"></use>
                         </svg>
-                        <button class="button game-section-download__btn">Завантажити</button>
+                        <button class="button button-game-page">Завантажити</button>
                     </li>
                     <li class="game-section-download__item">
                         <p class="game-section-download__file-name">League of Legends 2 linux.zip</p>
@@ -319,7 +331,7 @@
                         <svg class="game-section-download__icon-platform">
                             <use href="./images/icons.svg#icon-linux"></use>
                         </svg>
-                        <button class="button game-section-download__btn">Завантажити</button>
+                        <button class="button button-game-page">Завантажити</button>
                     </li>
                     <li class="game-section-download__item">
                         <p class="game-section-download__file-name">League of Legends 2 android.apk</p>
@@ -327,7 +339,7 @@
                         <svg class="game-section-download__icon-platform">
                             <use href="./images/icons.svg#icon-android"></use>
                         </svg>
-                        <button class="button game-section-download__btn">Завантажити</button>
+                        <button class="button button-game-page">Завантажити</button>
                     </li>
                 </ul>
             </div>
@@ -358,16 +370,47 @@
             </div>
         </section>
 
+        <section class="game-section-rate">
+            <div class="container">
+                <div class="game-section-rate__container">
+                    <h3 class="game-title-section game-section-rate__title">Оцінити гру</h3>
+                    <form class="game-section-rate__form" name="rating-game">
+                        <div class="game-section-rate__rating">
+                            <div class="game-section-rate__rating-box">
+                                <input class="game-section-rate__input" type="radio" id="star-5" name="set-rating-game"
+                                    value="5">
+                                <label class="game-section-rate__label" for="star-5"></label>
+                                <input class="game-section-rate__input" type="radio" id="star-4" name="set-rating-game"
+                                    value="4">
+                                <label class="game-section-rate__label" for="star-4"></label>
+                                <input class="game-section-rate__input" type="radio" id="star-3" name="set-rating-game"
+                                    value="3">
+                                <label class="game-section-rate__label" for="star-3"></label>
+                                <input class="game-section-rate__input" type="radio" id="star-2" name="set-rating-game"
+                                    value="2">
+                                <label class="game-section-rate__label" for="star-2"></label>
+                                <input class="game-section-rate__input" type="radio" id="star-1" name="set-rating-game"
+                                    value="1">
+                                <label class="game-section-rate__label" for="star-1"></label>
+                            </div>
+                        </div>
+                        <button class="button button-game-page" type="submit">Оцінити</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
         <section class="game-section-comments">
             <div class="container">
                 <h3 class="game-title-section">Відгуки (0)</h3>
                 <div class="game-section-comments__container">
                     <div class="game-section-comments__input-box">
-                        <textarea class="game-section-comments__input input-container__input" 
-                        name="text-comment" id="text-comment" 
-                        cols="30" rows="4" 
-                        placeholder="Напишіть відгук"></textarea>
-                        <button class="game-section-comments__button-send button">Додати відгук</button>
+                        <form name="add-comment">
+                            <textarea class="game-section-comments__input input-container__input" name="text-comment"
+                                id="text-comment" cols="30" rows="4" placeholder="Напишіть відгук"></textarea>
+                            <button type="submit" class="button-game-page button">Додати відгук</button>
+                        </form>
                     </div>
                     <ul class="game-section-comments__list">
                         <li class="game-section-comments__comment comment">
@@ -382,7 +425,12 @@
                                     <p class="comment__date">19 годин тому</p>
                                 </div>
                                 <div class="comment__main">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus animi cumque error quae magnam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem
+                                    nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora
+                                    repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet
+                                    consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex
+                                    impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus
+                                    animi cumque error quae magnam.
                                 </div>
                                 <div class="comment__footer">
                                     <div class="comment__rating-box">
@@ -410,7 +458,12 @@
                                     <p class="comment__date">19 годин тому</p>
                                 </div>
                                 <div class="comment__main">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus animi cumque error quae magnam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem
+                                    nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora
+                                    repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet
+                                    consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex
+                                    impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus
+                                    animi cumque error quae magnam.
                                 </div>
                                 <div class="comment__footer">
                                     <div class="comment__rating-box">
@@ -438,7 +491,12 @@
                                     <p class="comment__date">19 годин тому</p>
                                 </div>
                                 <div class="comment__main">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus animi cumque error quae magnam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem
+                                    nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora
+                                    repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet
+                                    consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex
+                                    impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus
+                                    animi cumque error quae magnam.
                                 </div>
                                 <div class="comment__footer">
                                     <div class="comment__rating-box">
@@ -466,7 +524,12 @@
                                     <p class="comment__date">19 годин тому</p>
                                 </div>
                                 <div class="comment__main">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus animi cumque error quae magnam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi doloribus voluptatem
+                                    nulla maxime, officiis vitae nesciunt amet enim, minus dolorem nihil culpa tempora
+                                    repellat. Mollitia ducimus fuga expedita rerum deserunt. Lorem, ipsum dolor sit amet
+                                    consectetur adipisicing elit. Illum, aspernatur magni adipisci reiciendis, odio ex
+                                    impedit deleniti aperiam necessitatibus excepturi nisi aliquam culpa eveniet natus
+                                    animi cumque error quae magnam.
                                 </div>
                                 <div class="comment__footer">
                                     <div class="comment__rating-box">
@@ -625,6 +688,7 @@
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/screenshot-slider.js"></script>
     <script src="./js/fslightbox.js"></script>
+    <script src="./js/user-menu.js"></script>
 </body>
 
 </html>

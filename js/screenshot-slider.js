@@ -23,13 +23,4 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.game-section-screenshots__carousel-btn.next',
         prevEl: '.game-section-screenshots__carousel-btn.prev',
     },
-    // grabCursor: true,
-    // autoHeight: true,
-
-    // watchOverFlow: true,
-
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
 });
