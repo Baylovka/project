@@ -15,39 +15,40 @@
         border: none;
         width: 100%;
         padding: 0;
-    
+
         &:focus {
             outline: none;
         }
-    
+
         &::placeholder {
             color: $color-primary-light-gray;
         }
-    
+
         &:focus::placeholder {
             color: $color-primary-red;
         }
     }
 }
 
-.input-checkbox {
+.input-radio {
     appearance: none;
 }
 
-.label-checkbox::before {
+.label-radio::before {
     content: "";
     display: block;
+    position: absolute;
+    left: -10px;
+    top: 2px;
     width: 16px;
     height: 16px;
-    border-radius: 2px;
-    border: 1px solid $color-secondary-839AA9;
-    position: absolute;
-    left: -16px;
-    top: -1px;
+    border-radius: 50%;
+    box-shadow: hsla(0, 0%, 100%, .15) 0 1px 1px, inset hsla(0, 0%, 0%, .5) 0 0 0 1px;
+    background-color: hsla(0,0%,0%,.2);
+    cursor: pointer;
 }
 
-.input-checkbox:checked + .label-checkbox::before {
-    background: url(../images/check-mark.svg) no-repeat;
-    background-size: 80% 80%;
-    background-position: center;
+.input-radio:checked+.label-radio::before {
+    background-image: -webkit-radial-gradient(rgb(255, 204, 204) 0%, rgb(255, 102, 102) 15%, hsla(0, 100%, 60%, 0.3) 28%, hsla(0, 100%, 30%, 0) 70%);
+    background-repeat: no-repeat;
 }

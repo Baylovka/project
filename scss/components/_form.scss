@@ -10,12 +10,13 @@
         width: 100%;
         background-color: $color-secondary-232428;
         border-radius: 8px;
-        padding: 8px 16px;
+        padding: 8px;
         margin-bottom: 16px;
         fill: $color-primary-red;
 
         @media screen and (min-width: $bp-mobile) {
             margin-bottom: 24px;
+            padding: 8px 16px;
         }
     }
 

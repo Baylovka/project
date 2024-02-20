@@ -47,7 +47,7 @@
         // flex-grow: 1;
         // flex-basis: calc((100% - 20px) / 3);
         overflow: hidden;
-        border-radius: 24px;
+        border-radius: clamp(1rem, 0.786rem + 0.952vw, 1.5rem);
         position: relative;
 
         &::before {

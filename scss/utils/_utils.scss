@@ -24,3 +24,12 @@
     opacity: 0;
     pointer-events: none;
 }
+
+.fit-width {
+    width: fit-content;
+}
+
+.center-block {
+    display: block;
+    margin: 0 auto;
+}

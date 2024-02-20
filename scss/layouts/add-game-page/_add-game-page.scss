@@ -1,0 +1,108 @@
+.add-game-section {
+
+    &__container {
+        background-color: $color-primary-ebony;
+        border-radius: 16px;
+        padding: 4px;
+        color: $color-primary-light-gray;
+        font-size: clamp(1rem, 0.946rem + 0.238vw, 1.125rem); //16-18
+
+        @media screen and (min-width: $bp-mobile) {
+            padding: 24px;
+            border-radius: 24px;
+        }
+    }
+
+    &__title-field {
+        color: $color-primary-red;
+        margin-bottom: clamp(0.75rem, 0.589rem + 0.714vw, 1.125rem);
+        font-size: clamp(1.125rem, 1.018rem + 0.476vw, 1.375rem);
+    }
+
+
+    &__upload-game-inputs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__upload-game-input {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+
+    &__links-other-platforms {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__link-other-platform {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__screenshot-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        // max-width: 480px;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px;
+
+        &:nth-child(odd) {
+            background-color: $color-primary-gray;
+        }
+    }
+
+    &__title-picture {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0;
+    }
+
+    &__icons-box {
+        display: flex;
+        gap: clamp(0.5rem, 0.286rem + 0.952vw, 1rem);
+        fill: $color-primary-red;
+    }
+
+    &__icon-btn {
+        width: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+        height: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+        cursor: pointer;
+        transition: filter .2s;
+
+        &:hover {
+            filter: drop-shadow(0 0 10px $color-primary-red);
+        }
+    }
+
+    &__icon {
+        width: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+        height: clamp(1.125rem, 0.964rem + 0.714vw, 1.5rem);
+    }
+
+    &__enable-disable-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__custom-radio-container {
+        position: relative;
+        margin-left: 8px;
+    }
+}
