@@ -94,7 +94,7 @@
                     <form name="form-add-game" autocomplete="off">
                         <div class="form__field">
                             <svg class="add-game-section__icon">
-                                <use href="./images/icons.svg#icon-user"></use>
+                                <use href="./images/icons.svg#icon-game"></use>
                             </svg>
                             <input class="form__input" type="text" name="title-game" id="title-game"
                                 placeholder="Назва гри" required>
@@ -107,7 +107,7 @@
                         </div>
 
                         <div class="form__field">
-                            <label for="genre-game">Виберіть жанр:</label>
+                            <label for="genre-game">Жанр гри:</label>
                             <select id="genre-game" name="genre-game" required>
                                 <option value="racing">Гонки</option>
                                 <option value="action">Екшн</option>
@@ -122,27 +122,6 @@
                                 <option value="shooter">Шутер</option>
                                 <option value="other" selected>Інше</option>
                             </select>
-                            <!-- /* Загальні стилі для <select> */
-                                select {
-                                    padding: 10px;
-                                    font-size: 16px;
-                                    border: 1px solid #ccc;
-                                    border-radius: 5px;
-                                    appearance: none; /* Сховати стандартний вигляд стрілки для <select> у деяких браузерах */
-                                    background-color: #fff;
-                                }
-                                
-                                /* Стилі для вигляду опцій у випадаючому списку */
-                                select option {
-                                    padding: 10px;
-                                }
-                                
-                                /* Змінення вигляду при наведенні або фокусі */
-                                select:hover,
-                                select:focus {
-                                    border-color: #007bff;
-                                    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-                                } -->
                         </div>
 
                         <h3 class="add-game-section__title-field">Додайте гру</h3>
@@ -150,20 +129,23 @@
                             <div class="add-game-section__upload-game-inputs">
                                 <div class="add-game-section__upload-game-input">
                                     <label for="game-for-win">для windows</label>
-                                    <input type="file" id="game-for-win" name="game-for-win" accept="image/*">
+                                    <input type="file" id="game-for-win" name="game-for-win"
+                                        accept=".zip, .rar, .exe, .msi">
                                 </div>
                                 <div class="add-game-section__upload-game-input">
                                     <label for="game-for-macos">для macOS</label>
-                                    <input type="file" id="game-for-macos" name="game-for-macos" accept="image/*">
+                                    <input type="file" id="game-for-macos" name="game-for-macos"
+                                        accept=".zip, .rar, .app, .pkg">
                                 </div>
                                 <div class="add-game-section__upload-game-input">
                                     <label for="game-for-linux">для linux</label>
-                                    <input type="file" id="game-for-linux" name="game-for-linux" accept="image/*">
+                                    <input type="file" id="game-for-linux" name="game-for-linux"
+                                        accept=".zip, .rar, .run, .bin">
                                 </div>
                                 <div class="add-game-section__upload-game-input">
                                     <label for="game-for-android">для android</label>
                                     <input type="file" id="game-for-android" name="game-for-android"
-                                        accept="application/vnd.android.package-archive">
+                                        accept=".zip, .rar, .apk">
                                 </div>
                             </div>
                         </div>
@@ -197,7 +179,7 @@
 
                         <h3 class="add-game-section__title-field">Головний банер</h3>
                         <div class="form__field">
-                            <input name="banner-game" type="file" accept="image/*" required>
+                            <input class="test-INPUT" name="banner-game" type="file" accept="image/*" required>
                         </div>
 
                         <h3 class="add-game-section__title-field">Заставка гри</h3>
@@ -207,10 +189,11 @@
 
                         <h3 class="add-game-section__title-field">Скріншоти</h3>
                         <div class="form__field">
+                            <!-- <button onclick="addImage()" class="button fit-width">Додати картинку</button> -->
                             <div class="add-game-section__screenshot-container">
-                                <input name="screenshots-game" type="file" id="file-input" accept="image/*">
-                                <!-- <button onclick="addImage()" class="button fit-width">Додати картинку</button> -->
-                                <ul class="add-game-section__list">
+                                <input name="screenshots-game" type="file" id="screenshot-input" accept="image/*"
+                                    multiple required>
+                                <ul class="add-game-section__list" id="screenshot-list">
                                     <li class="add-game-section__item">
                                         <p class="add-game-section__title-picture">
                                             League legends 2.png
@@ -240,12 +223,12 @@
                             <div class="add-game-section__enable-disable-container">
                                 <div class="add-game-section__custom-radio-container">
                                     <input class="input-radio" type="radio" name="screenshot-position"
-                                        id="horizontal-screenshots" required>
+                                        id="horizontal-screenshots" value="horizontal" required>
                                     <label class="label-radio" for="horizontal-screenshots">Горизонтальне</label>
                                 </div>
                                 <div class="add-game-section__custom-radio-container">
                                     <input class="input-radio" type="radio" name="screenshot-position"
-                                        id="vertical-screenshots">
+                                        id="vertical-screenshots" value="vertical">
                                     <label class="label-radio" for="vertical-screenshots">Вертикальне</label>
                                 </div>
                             </div>
@@ -256,11 +239,12 @@
                             <div class="add-game-section__enable-disable-container">
                                 <div class="add-game-section__custom-radio-container">
                                     <input class="input-radio" type="radio" name="comment-game" id="enable-comments"
-                                        required>
+                                        value="on" required>
                                     <label class="label-radio" for="enable-comments">Увімкнути</label>
                                 </div>
                                 <div class="add-game-section__custom-radio-container">
-                                    <input class="input-radio" type="radio" name="comment-game" id="disable-comments">
+                                    <input class="input-radio" type="radio" name="comment-game" id="disable-comments"
+                                        value="off">
                                     <label class="label-radio" for="disable-comments">Вимкнути</label>
                                 </div>
                             </div>
@@ -422,38 +406,53 @@
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/user-menu.js"></script>
     <script>
-        function addImage() {
-            const fileInput = document.getElementById('file-input');
-            const fileList = fileInput.files;
+        const fileInput = document.getElementById('screenshot-input');
+        const imageList = document.getElementById('screenshot-list');
+        let screenshotRemove; /*remove*/
+  
 
-            if (fileList.length > 0) {
-                const imageList = document.getElementById('image-list');
+        fileInput.addEventListener('change', handleFileSelect);
 
-                Array.from(fileList).forEach(file => {
-                    const listItem = document.createElement('li');
-                    listItem.className = 'image-item';
+        function handleFileSelect(event) {
+            const files = event.target.files;
 
-                    const fileName = document.createTextNode(file.name);
-                    listItem.appendChild(fileName);
-
-                    const deleteBtn = document.createElement('span');
-                    deleteBtn.className = 'delete-btn';
-                    deleteBtn.innerHTML = ' &#10006;';
-                    deleteBtn.addEventListener('click', () => removeImage(listItem));
-
-                    listItem.appendChild(deleteBtn);
-
-                    imageList.appendChild(listItem);
-                });
-
-                // Clear the file input after adding images
-                fileInput.value = '';
+            // Перевірка, чи вибрано не менше 3-х файлів
+            if (files.length < 3) {
+                alert('Будь ласка, виберіть щонайменше 3 файли.');
+                fileInput.value = null;
+                return;
             }
-        }
 
-        function removeImage(item) {
-            const imageList = document.getElementById('image-list');
-            imageList.removeChild(item);
+            // Очистити список перед завантаженням нових зображень
+            imageList.innerHTML = '';
+
+            for (const file of files) {
+                let item = `
+                <li class="add-game-section__item">
+                    <p class="add-game-section__title-picture">
+                        ${file.name}
+                    </p>
+                    <div class="add-game-section__icons-box">
+                        <svg class="add-game-section__icon-btn">
+                            <use href="./images/icons.svg#icon-delete"></use>
+                        </svg>
+                    </div>
+                </li>
+                `;
+
+                imageList.innerHTML += item;
+            }
+
+
+            /*remove*/
+            screenshotRemove = document.querySelectorAll('.add-game-section__icon-btn');
+
+            screenshotRemove.forEach((btnRemove) => {
+                btnRemove.addEventListener('click', () => {
+                    btnRemove.closest(".add-game-section__item").remove();
+                });
+            });
+            /*----------------------*/
         }
     </script>
 </body>

@@ -336,6 +336,68 @@ a {
   background-repeat: no-repeat;
 }
 
+select {
+  padding: 0 4px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #FF4242;
+  background-color: #171717;
+  -webkit-box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
+          box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
+  cursor: pointer;
+}
+
+select:hover,
+select:focus {
+  border: 1px solid black;
+  border-color: #FF4242;
+  outline: none;
+  -webkit-box-shadow: 0 0 5px rgba(255, 66, 66, 0.5);
+          box-shadow: 0 0 5px rgba(255, 66, 66, 0.5);
+}
+
+input[type=file]::-webkit-file-upload-button {
+  padding: 8px;
+  margin: 4px;
+  color: #F9F9F9;
+  background-color: #FF4242;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+input[type=file]::file-selector-button {
+  padding: 8px;
+  margin: 4px;
+  color: #F9F9F9;
+  background-color: #FF4242;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: -webkit-box-shadow 0.2s;
+  transition: -webkit-box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+}
+
+input[type=file]::-webkit-file-upload-button:hover {
+  -webkit-box-shadow: 0 0 4px #FF4242;
+          box-shadow: 0 0 4px #FF4242;
+}
+
+input[type=file]::file-selector-button:hover {
+  -webkit-box-shadow: 0 0 4px #FF4242;
+          box-shadow: 0 0 4px #FF4242;
+}
+
 .service-card {
   display: -webkit-box;
   display: -ms-flexbox;

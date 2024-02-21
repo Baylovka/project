@@ -52,3 +52,38 @@
     background-image: -webkit-radial-gradient(rgb(255, 204, 204) 0%, rgb(255, 102, 102) 15%, hsla(0, 100%, 60%, 0.3) 28%, hsla(0, 100%, 30%, 0) 70%);
     background-repeat: no-repeat;
 }
+
+select {
+    padding: 0 4px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    appearance: none;
+    color: $color-primary-red;
+    background-color: $color-primary-gray;
+    box-shadow: hsla(0, 0%, 100%, .15) 0 1px 1px, inset hsla(0, 0%, 0%, .5) 0 0 0 1px;
+    cursor: pointer;
+}
+
+select:hover,
+select:focus {
+    border: 1px solid black;
+    border-color: $color-primary-red;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 66, 66, 0.5);
+}
+
+input[type=file]::file-selector-button {
+    padding: 8px;
+    margin: 4px;
+    color: $color-primary-snow;
+    background-color: $color-primary-red;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .2s;
+}
+
+input[type=file]::file-selector-button:hover {
+    box-shadow: 0 0 4px $color-primary-red;
+}
