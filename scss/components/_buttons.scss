@@ -16,57 +16,6 @@
     }
 
     &:hover {
-        // background-color: $color-secondary-FCB62A;
-        // background-color: rgba(255, 66, 66, 0.8);
-        // background-color: #FF7F7F; /* Теплий червоний при наведенні */
-        // background-color: #FF6262; /* Яскравіший червоний при наведенні */
-        box-shadow: 0 0 10px $color-primary-red; /* Підсвітка навколо кнопки */
+        box-shadow: 0 0 10px $color-primary-red;
     }
 }
-
-.button-svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $color-secondary-839AA9;
-    fill: $color-primary-white;
-    background-color: $color-secondary-839AA9;
-    border: none;
-    padding: 0;
-    width: 73px;
-    height: 73px;
-    margin-left: 40px;
-    clip-path: path("M0.170582 30.6286C0.170582 30.6286 -3.18841 13.0171 19.9046 2.31156C42.9977 -8.39397 87.7142 23.4847 68.1901 46.5611C48.666 69.6375 37.9592 78.4398 19.9046 67.0206C1.85007 55.6013 0.170582 30.6286 0.170582 30.6286Z");
-    cursor: pointer;
-    transition: background-color .2s;
-
-    @media screen and (min-width: $bp-small-desktop) {
-        position: absolute;
-        margin-left: unset;
-        clip-path: path("M0.376215 52.1494C0.376215 52.1494 -7.03197 21.9889 43.8993 3.65513C94.8305 -14.6786 193.452 39.9153 150.392 79.4347C107.332 118.954 83.7182 134.029 43.8993 114.473C4.0803 94.9165 0.376215 52.1494 0.376215 52.1494Z");
-        width: 161px;
-        height: 123px;
-        top: 36px;
-        right: 24px;
-    }
-
-    @media screen and (min-width: $bp-desktop) {
-        top: 74px;
-        right: 112px;
-    }
-
-    &:hover {
-        background-color: $color-secondary-FCB62A;
-    }
-
-    &--size {
-        width: 40px; 
-        height: 40px;
-        
-        @media screen and (min-width: $bp-small-desktop) {
-            width: 81px; 
-            height: 75px;
-        }
-    }
-}
-

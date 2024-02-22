@@ -12,10 +12,19 @@
 }
 
 .main-login {
-    background-image: url(../images/bg-1dark.jpg);
+    background-image: url(../images/bg-login.jpg);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: right;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        background: url(../images/bg-login@2x.jpg);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        background-position: right;
+    }
 
     @media screen and (min-width: $bp-desktop) {
         background-size: 50% 100%;
